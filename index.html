@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gold Gym 3.0 — Karachi's cleanest luxury gym in Model Colony. Elite coaches, pro-grade equipment, open daily until 1:00 AM.">
+    <meta name="theme-color" content="#121212">
+    <title>Gold Gym 3.0 | Luxury Fitness Karachi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://unpkg.com/lucide@0.469.0"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script defer src="script.js"></script>
+    <noscript><style>.reveal,.reveal-left,.reveal-right,#hero-title,#hero-subtext,#hero-cta{opacity:1!important;transform:none!important}.slide:first-child{opacity:1!important}</style></noscript>
+</head>
+<body class="bg-[#121212] text-white selection:bg-[#D4AF37] selection:text-black overflow-x-hidden">
+
+    <header id="main-nav" class="fixed w-full z-50 transition-all duration-500 border-b border-white/5 bg-[#121212]/50 backdrop-blur-md">
+        <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between" aria-label="Main">
+            <a href="#home" class="text-xl md:text-2xl font-black tracking-tighter text-[#D4AF37] uppercase italic">GOLD GYM <span class="text-white">3.0</span></a>
+            <div class="hidden lg:flex gap-8 items-center">
+                <div id="nav-links" class="flex gap-6 xl:gap-8 text-[10px] font-black uppercase tracking-[0.2em]">
+                    <a class="nav-link" href="#about">About</a>
+                    <a class="nav-link" href="#features">Features</a>
+                    <a class="nav-link" href="#services">Services</a>
+                    <a class="nav-link" href="#trainers">Trainers</a>
+                    <a class="nav-link" href="#pricing">Pricing</a>
+                    <a class="nav-link" href="#reviews">Reviews</a>
+                    <a class="nav-link" href="#faq">FAQ</a>
+                    <a class="nav-link" href="#location">Location</a>
+                </div>
+                <a href="#join" class="glass-ios px-8 py-3 rounded-full text-[10px] font-black uppercase tracking-widest">Join Elite</a>
+            </div>
+            <button id="mobile-menu-btn" class="lg:hidden text-white p-2" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+                <i data-lucide="menu" class="ic-menu"></i><i data-lucide="x" class="ic-close hidden"></i>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden lg:hidden glass-ios border-x-0 flex-col px-6 py-4">
+            <a href="#join" class="mt-3 bg-[#D4AF37] text-black text-center py-4 rounded-full text-xs font-black uppercase tracking-widest">Join Elite</a>
+        </div>
+        <div id="progress"></div>
+    </header>
+
+    <main>
+    <section id="home" class="relative min-h-[100svh] flex items-center overflow-hidden pt-24 pb-16">
+        <div class="absolute inset-0 z-0" id="hero-slider">
+            <div class="slide absolute inset-0 opacity-0">
+                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop" alt="" fetchpriority="high" class="w-full h-full object-cover">
+            </div>
+            <div class="slide absolute inset-0 opacity-0">
+                <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=2069&auto=format&fit=crop" alt="" class="w-full h-full object-cover">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-[#121212]/60 z-10"></div>
+        </div>
+
+        <div class="relative z-20 wrap w-full">
+            <h1 class="text-5xl sm:text-7xl lg:text-9xl font-black mb-6 leading-none uppercase tracking-tighter opacity-0 translate-y-10" id="hero-title">
+                GOLD GYM 3.0:<br><span class="text-gold-metallic animate-shine">THE APEX OF POWER.</span>
+            </h1>
+            <p class="max-w-2xl text-base sm:text-lg md:text-xl text-gray-300 mb-10 opacity-0 translate-y-10" id="hero-subtext">
+                Karachi's most spotless fitness destination. Engineered for elite results. Open daily until 1:00 AM.
+            </p>
+            <div class="flex flex-row gap-2 md:gap-6 opacity-0 translate-y-10" id="hero-cta">
+                <a href="#join" class="glass-ios flex-1 md:flex-none px-3 md:px-12 py-4 md:py-5 rounded-full font-black uppercase text-[10px] md:text-sm text-center tracking-tighter md:tracking-widest hover:scale-105 transition-all">Claim Pass</a>
+                <a href="https://maps.app.goo.gl/1ssY8SoMNpFZewWu5" target="_blank" rel="noopener" class="bg-white/5 border border-white/10 flex-1 md:flex-none px-3 md:px-12 py-4 md:py-5 rounded-full font-black uppercase text-[10px] md:text-sm text-center tracking-tighter md:tracking-widest hover:bg-white/10 transition-all">Directions</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="py-12 bg-[#0a0a0a] border-y border-white/5">
+        <div class="wrap grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div class="reveal"><div class="text-3xl font-black text-[#D4AF37]">500+</div><div class="text-[10px] uppercase tracking-widest text-gray-500">Elite Members</div></div>
+            <div class="reveal"><div class="text-3xl font-black text-[#D4AF37]">15+</div><div class="text-[10px] uppercase tracking-widest text-gray-500">Pro Coaches</div></div>
+            <div class="reveal"><div class="text-3xl font-black text-[#D4AF37]">1:00 AM</div><div class="text-[10px] uppercase tracking-widest text-gray-500">Late Access</div></div>
+            <div class="reveal"><div class="text-3xl font-black text-[#D4AF37]">100%</div><div class="text-[10px] uppercase tracking-widest text-gray-500">Hygiene</div></div>
+        </div>
+    </div>
+
+    <section id="about" class="sec bg-[#121212]">
+        <div class="wrap grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div class="reveal-left">
+                <h2 class="text-4xl md:text-7xl font-black mb-8 uppercase tracking-tighter">Forged in <br><span class="text-gold-metallic animate-shine">Model Colony</span></h2>
+                <p class="text-gray-400 text-lg mb-8 leading-relaxed">The sanctuary for those who demand more. We don't just provide equipment; we provide an environment where limits are shattered. Located in Karachi's heart.</p>
+                <div class="p-6 md:p-8 border-l-2 border-[#D4AF37] bg-white/5 italic text-lg md:text-xl text-gray-300 uppercase font-black">Elite standards only.</div>
+            </div>
+            <div class="reveal-right">
+                <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=2070&auto=format&fit=crop" alt="Athlete training inside Gold Gym 3.0" loading="lazy" class="rounded-[28px] md:rounded-[40px] border border-white/10 shadow-2xl grayscale hover:grayscale-0 transition-all duration-1000">
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="sec bg-[#0a0a0a]">
+        <div class="wrap grid md:grid-cols-3 gap-6 md:gap-8">
+            <article class="reveal card p-8 md:p-10">
+                <i data-lucide="dumbbell" class="w-12 h-12 text-[#D4AF37] mb-6"></i>
+                <h3 class="text-2xl font-bold mb-4 uppercase">Elite Iron</h3>
+                <p class="text-gray-400 text-sm">Pro-grade equipment maintained daily for perfect biomechanics.</p>
+            </article>
+            <article class="reveal card p-8 md:p-10">
+                <i data-lucide="zap" class="w-12 h-12 text-[#D4AF37] mb-6"></i>
+                <h3 class="text-2xl font-bold mb-4 uppercase">Aggressive Atmosphere</h3>
+                <p class="text-gray-400 text-sm">Cinematic lighting and energy that pushes you to your limits.</p>
+            </article>
+            <article class="reveal card p-8 md:p-10">
+                <i data-lucide="shield-check" class="w-12 h-12 text-[#D4AF37] mb-6"></i>
+                <h3 class="text-2xl font-bold mb-4 uppercase">Spotless Hygiene</h3>
+                <p class="text-gray-400 text-sm">Karachi's cleanest gym. Sanitized daily for elite training.</p>
+            </article>
+        </div>
+    </section>
+
+    <section id="services" class="sec bg-[#121212]">
+        <div class="wrap grid lg:grid-cols-2 gap-6 lg:gap-10">
+            <article class="reveal-left bg-[url('https://images.unsplash.com/photo-1583454110551-21f2fa20e39c?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center h-[380px] md:h-[500px] rounded-[32px] md:rounded-[50px] relative overflow-hidden group border border-white/5">
+                <div class="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-all flex flex-col justify-end p-8 md:p-12">
+                    <h3 class="text-2xl md:text-3xl font-black uppercase mb-2">Personal Training</h3>
+                    <p class="text-gray-300">Bodybuilder-led sessions for elite results.</p>
+                </div>
+            </article>
+            <article class="reveal-right bg-[url('https://images.unsplash.com/photo-1534367507873-d2d7e24c797f?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center h-[380px] md:h-[500px] rounded-[32px] md:rounded-[50px] relative overflow-hidden group border border-white/5">
+                <div class="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-all flex flex-col justify-end p-8 md:p-12">
+                    <h3 class="text-2xl md:text-3xl font-black uppercase mb-2">Powerlifting Hub</h3>
+                    <p class="text-gray-300">Dedicated platforms and calibrated plates.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- NEW: TRAINERS (replace names/photos with your real coaches) -->
+    <section id="trainers" class="sec bg-[#0a0a0a]">
+        <div class="wrap">
+            <header class="sec-head reveal">
+                <p class="eyebrow">The Team</p>
+                <h2 class="sec-title">Meet The <span class="text-gold-metallic animate-shine">Coaches</span></h2>
+            </header>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <article class="reveal card coach group">
+                    <div class="coach-img"><img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?q=80&w=800&auto=format&fit=crop" alt="Coach Imran Qureshi" loading="lazy"></div>
+                    <div class="p-6"><h3 class="font-extrabold uppercase text-lg">Imran Qureshi</h3><p class="text-[#D4AF37] text-xs font-black uppercase tracking-widest mt-1">Bodybuilding &amp; Contest Prep</p></div>
+                </article>
+                <article class="reveal card coach group">
+                    <div class="coach-img"><img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&w=800&auto=format&fit=crop" alt="Coach Sana Farooq" loading="lazy"></div>
+                    <div class="p-6"><h3 class="font-extrabold uppercase text-lg">Sana Farooq</h3><p class="text-[#D4AF37] text-xs font-black uppercase tracking-widest mt-1">Strength &amp; Fat Loss</p></div>
+                </article>
+                <article class="reveal card coach group">
+                    <div class="coach-img"><img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=800&auto=format&fit=crop" alt="Coach Hamza Siddiqui" loading="lazy"></div>
+                    <div class="p-6"><h3 class="font-extrabold uppercase text-lg">Hamza Siddiqui</h3><p class="text-[#D4AF37] text-xs font-black uppercase tracking-widest mt-1">Powerlifting</p></div>
+                </article>
+                <article class="reveal card coach group">
+                    <div class="coach-img"><img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=800&auto=format&fit=crop" alt="Coach Bilal Raza" loading="lazy"></div>
+                    <div class="p-6"><h3 class="font-extrabold uppercase text-lg">Bilal Raza</h3><p class="text-[#D4AF37] text-xs font-black uppercase tracking-widest mt-1">Functional &amp; Mobility</p></div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: PRICING (placeholder prices in PKR) -->
+    <section id="pricing" class="sec bg-[#121212]">
+        <div class="wrap">
+            <header class="sec-head reveal">
+                <p class="eyebrow">Membership</p>
+                <h2 class="sec-title">Choose Your <span class="text-gold-metallic animate-shine">Tier</span></h2>
+            </header>
+            <div class="grid lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+                <article class="reveal card plan">
+                    <h3 class="font-black uppercase text-xl">Basic</h3>
+                    <p class="price">PKR 6,000<span>/mo</span></p>
+                    <ul><li>Full gym floor access</li><li>Locker &amp; shower rooms</li><li>Open until 1:00 AM</li></ul>
+                    <a href="#join" class="glass-ios plan-btn">Get Basic</a>
+                </article>
+                <article class="reveal card plan">
+                    <h3 class="font-black uppercase text-xl">Pro</h3>
+                    <p class="price">PKR 9,500<span>/mo</span></p>
+                    <ul><li>Everything in Basic</li><li>Free fitness assessment</li><li>Monthly coach check-in</li><li>Powerlifting hub access</li></ul>
+                    <a href="#join" class="glass-ios plan-btn">Get Pro</a>
+                </article>
+                <article class="reveal card plan plan-elite">
+                    <span class="plan-badge">Most Wanted</span>
+                    <h3 class="font-black uppercase text-xl text-[#D4AF37]">Elite</h3>
+                    <p class="price">PKR 15,000<span>/mo</span></p>
+                    <ul><li>Everything in Pro</li><li>8 personal training sessions</li><li>Custom diet &amp; training plan</li><li>Priority late-night slots</li></ul>
+                    <a href="#join" class="plan-btn bg-[#D4AF37] text-black hover:bg-white">Go Elite</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: REVIEWS (sample text — replace with real member reviews) -->
+    <section id="reviews" class="sec bg-[#0a0a0a]">
+        <div class="wrap">
+            <header class="sec-head reveal">
+                <p class="eyebrow">Member Voices</p>
+                <h2 class="sec-title">Elite <span class="text-gold-metallic animate-shine">Testimonials</span></h2>
+            </header>
+            <div class="reviews">
+                <figure class="reveal card p-8">
+                    <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                    <blockquote class="text-gray-300 leading-relaxed my-6">Cleanest gym I've trained in. The equipment is always spotless and the late hours fit my schedule perfectly.</blockquote>
+                    <figcaption class="font-black uppercase text-sm">Ahmed K. <span class="block text-gray-500 text-[10px] tracking-widest">Member, 1 year</span></figcaption>
+                </figure>
+                <figure class="reveal card p-8">
+                    <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                    <blockquote class="text-gray-300 leading-relaxed my-6">My coach rebuilt my squat from scratch. Real progress in three months, not just a gym with nice lighting.</blockquote>
+                    <figcaption class="font-black uppercase text-sm">Fatima R. <span class="block text-gray-500 text-[10px] tracking-widest">Elite Member</span></figcaption>
+                </figure>
+                <figure class="reveal card p-8">
+                    <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                    <blockquote class="text-gray-300 leading-relaxed my-6">The powerlifting platforms and calibrated plates are exactly what I needed to prep for my meet.</blockquote>
+                    <figcaption class="font-black uppercase text-sm">Usman T. <span class="block text-gray-500 text-[10px] tracking-widest">Pro Member</span></figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: FAQ (native accordion, one open at a time) -->
+    <section id="faq" class="sec bg-[#121212]">
+        <div class="max-w-3xl mx-auto px-6">
+            <header class="sec-head reveal">
+                <p class="eyebrow">Good To Know</p>
+                <h2 class="sec-title">Common <span class="text-gold-metallic animate-shine">Questions</span></h2>
+            </header>
+            <div class="faq reveal">
+                <details name="faq" open><summary>What are your opening hours?</summary><p>We're open daily until 1:00 AM, so you can train after work or late at night.</p></details>
+                <details name="faq"><summary>Where are you located?</summary><p>7 Model Colony Rd, Model Colony Block 10, Karachi — inside the Shoaib Dental Surgery building.</p></details>
+                <details name="faq"><summary>Do you offer personal training?</summary><p>Yes. Our coaches run bodybuilder-led sessions, and Elite members get personal training sessions included.</p></details>
+                <details name="faq"><summary>How clean is the gym?</summary><p>Equipment and floors are sanitized daily, and we keep hygiene standards high at every hour we're open.</p></details>
+                <details name="faq"><summary>How do I join?</summary><p>Fill in the form below with your name and number, and our team will get in touch to set up your pass.</p></details>
+            </div>
+        </div>
+    </section>
+
+    <section id="location" class="sec bg-[#0a0a0a]">
+        <div class="wrap grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div class="reveal-left">
+                <h2 class="text-4xl md:text-6xl font-black mb-8 uppercase tracking-tighter">Find Your <span class="text-gold-metallic animate-shine">Arena</span></h2>
+                <address class="not-italic space-y-6 mb-10 text-gray-400">
+                    <p>7 Model Colony Rd, Model Colony Block 10, Karachi.</p>
+                    <p class="text-white font-bold italic">Inside Shoaib Dental Surgery Building</p>
+                </address>
+                <a href="https://maps.app.goo.gl/1ssY8SoMNpFZewWu5" target="_blank" rel="noopener" class="glass-ios inline-block px-10 md:px-12 py-5 rounded-full font-black uppercase text-sm tracking-widest hover:scale-105 transition-all">Get Directions</a>
+            </div>
+            <div class="reveal-right relative">
+                <div class="rounded-[28px] md:rounded-[40px] overflow-hidden border border-white/10 shadow-2xl relative">
+                    <img src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?q=80&w=1974&auto=format&fit=crop" alt="Map of Gold Gym 3.0 location" loading="lazy" class="w-full h-72 md:h-96 object-cover opacity-50">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="p-5 bg-black/80 rounded-full border border-[#D4AF37] animate-bounce"><i data-lucide="map-pin" class="text-[#D4AF37]"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="join" class="sec bg-[#121212]">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="glass-ios p-8 md:p-16 rounded-[32px] md:rounded-[50px] border border-white/10 text-center reveal">
+                <h2 class="text-3xl md:text-5xl font-black mb-10 uppercase tracking-tighter">Claim Your <span class="text-gold-metallic animate-shine">Pass</span></h2>
+                <form id="lead-form" class="space-y-8">
+                    <input type="text" name="name" autocomplete="name" aria-label="Full name" placeholder="FULL NAME" required class="w-full bg-white/5 border-b border-white/10 p-4 outline-none focus:border-[#D4AF37] font-bold uppercase text-sm">
+                    <input type="tel" name="phone" autocomplete="tel" aria-label="Phone number" placeholder="PHONE NUMBER" required class="w-full bg-white/5 border-b border-white/10 p-4 outline-none focus:border-[#D4AF37] font-bold uppercase text-sm">
+                    <button type="submit" class="w-full bg-[#D4AF37] text-black p-5 md:p-6 rounded-full font-black uppercase text-base md:text-lg tracking-widest hover:bg-white transition-all">Get Started</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <footer class="py-16 border-t border-white/5 bg-[#0a0a0a] text-center px-6">
+        <div class="text-2xl font-black text-[#D4AF37] mb-8 italic uppercase">GOLD GYM 3.0</div>
+        <p class="text-[10px] text-gray-600 uppercase font-black tracking-[0.3em] md:tracking-[0.5em]">© 2026 Model Colony Karachi | Apex of Power</p>
+    </footer>
+
+    <button id="to-top" aria-label="Back to top"><i data-lucide="chevron-up"></i></button>
+</body>
+</html>
